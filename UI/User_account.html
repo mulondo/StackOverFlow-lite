@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StackOverFlow-lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/ourcss.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="heading">StackoverFlow-lite</h1>
+
+            <nav>          
+                <a href="#">User</a>                    
+                <a href="#">Help</a>
+                <button class="logout">Logout</button>                   
+            </nav>
+
+            <form>
+                    <input type="text" placeholder="Search" name="search">
+                    <button type="submit" name="serach_button">Search</button>
+            </form>
+           
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="dashboard">
+            <button>Ask questions</button></br>
+            <button>Most answered questions</button>
+        </section>
+
+        <section class="workspace">
+            <div class="workspace_btn">
+                <button class="ask_button">Ask questions</button>
+                <button class="most_answeredbutton">Most answered questions</button>
+            </div>
+            <h2>Questions</h2>
+
+            <div class="column">
+                <div class="row">
+                    <div class="card">
+                        <h3>Question 1</h3>
+                        <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>
+                        <script>
+                            function myFunction() {
+                                document.getElementById("demo").innerHTML = "Hello World";
+                            }
+                        </script>
+        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="card">
+                        <h3>Question 2</h3>
+                        <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                        <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                    </div>
+                </div> 
+
+                <div class="row">
+                        <div class="card">
+                            <h3>Question 2</h3>
+                            <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                            <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                        </div>
+                    </div> 
+                    
+            </div>
+
+        </section>
+    </div>
+    
+    
+</body>
+</html>
