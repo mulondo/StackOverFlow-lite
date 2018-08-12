@@ -13,7 +13,6 @@ input[type=text], input[type=password] ,input[type=email]{
 h1{
     color: #0B4C5F;
     margin-left: 20%
-
 }
 
 /* Set a style for sign up button */
@@ -51,23 +50,6 @@ img.user_img {
     padding: 16px;
 }
 
-/* span tag style */
-span{
-    float: right;
-    padding: 30px 20px;
-    margin-top: -20px;    
-}
-
-/* style for links under span */
-span a{
-    color: #0B4C5F;
-    padding-left: 10px
-}
-
-/* onhover link under span */
-span a:hover{
-    color:chocolate
-}
 
 /* The Modal (background) */
 .modal {
@@ -91,11 +73,6 @@ span a:hover{
     width: 35%; /* Could be more or less, depending on screen size */
     height: 500px
 }
-
-/* The Close Button (x) */
-
-
-
 
 /* Add Zoom Animation */
 .animate {
