@@ -42,24 +42,32 @@ h1{
     position: relative;
 }
 
-img.avatar {
+img.user_img {
     width: 20%;
     border-radius: 100%;
 }
 
+/* style for the container */
 .container {
     padding: 16px;
 }
 
+/* span tag style */
 span{
     float: right;
     padding: 30px 20px;
     margin-top: -20px;    
 }
 
+/* style for links under span */
 span a{
     color: #0B4C5F;
     padding-left: 10px
+}
+
+/* onhover link under span */
+span a:hover{
+    color:chocolate
 }
 
 /* The Modal (background) */
