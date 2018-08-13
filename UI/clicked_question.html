@@ -14,7 +14,7 @@
                 
         <h4>User</h4>
         <nav>                           
-            <button class="logout">Logout</button>                        
+            <button name="logout" class="logout">Logout</button>                        
         </nav>  
         <form>
             <input type="text" placeholder="Search" name="search">
@@ -23,9 +23,9 @@
     </header>
 
     <div class="container">
-       <section>
+       <section>   
             <aside>
-                
+                <h2>My posts</h2>
             </aside>
                 <article>
                     <textarea readonly>Here is the the full description of the question that has been clicked.
@@ -35,10 +35,11 @@
 
                     <div id="id01" class="modal">  
                         <form class="modal-content animate" action="">
-                            <textarea name="answer"></textarea>          
-                            <button type="submit">Post</button>
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                        
+                            <textarea class="modal-textarea" name="answer"></textarea>
+                            <span>   
+                                <button class="postanswer_btn" type="submit">Post</button>
+                                <button class="cancel_btn" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            </span>                            
                         </form>
                     </div>
                 </article>
