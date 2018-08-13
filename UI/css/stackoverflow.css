@@ -2,7 +2,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    
     margin:0;
     padding:0
 }
@@ -16,8 +15,17 @@ body{
 /* header */
 header{
     color: #E6E6E6;
-    background-color: #0B4C5F
+    background-color: #0B4C5F;
+    width:100%;
+    margin: auto;
+    overflow: hidden;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
 header a{
    color: #E6E6E6;
@@ -26,9 +34,19 @@ header a{
 
 header nav{
     float: right;
-    margin-top: -60px;
-    margin-right: -5px
-    
+    margin-top: -60px;  
+}
+
+header h4{
+    color: #B45F04;
+    margin-top: -50px;
+    margin-right: 125px;
+    padding:2px;
+    float:right;
+}
+
+header h1{
+    padding:0 0 0 30px
 }
 
 header nav a:hover{
@@ -38,7 +56,7 @@ header nav a:hover{
 header form{
     margin-top: -50px;
     float: right;
-    margin-right: 170px
+    margin-right: 180px
 }
 
 .logout{
@@ -46,7 +64,7 @@ header form{
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 14px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -55,23 +73,49 @@ header form{
     color: #B45F04
 }
 
-/* dashboard*/
-.dashboard{
-    width: 20%;
-    height:600px;
-    background-color: #E6E6E6;
+article{    
+    background-color: #fff; 
+    margin-left: 10px;
+    padding: 10px;
+    width: 80%
+}
+
+section {   
+    display: flex;
+    padding: 10px
+}
+
+/* Style the navigation menu */
+aside {
+    background: #ccc;
+    padding: 20px;
+    width: 250px;    
+    height: 500px
+}
+
+/* Style the list inside the menu */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 140%;
+    background-color: #f1f1f1;
+  }
+
+  .row {
+    margin: 0;
     float: left;
-    border-left-color: #B45F04
-}
+    height: auto;
+    padding: 10px
+    }
+  
+  
+  .column {
+    width: 100%
+    padding 10px
+  }
 
-/* workspace */
-.workspace{
-    width: 80%;
-    padding: 5px 0 0 5px;
-    margin-left:10px
-}
-
-.ask_button{
+  .ask_button{
     color: #fff;
     background-color: #0B4C5F;
     block-size: 40px;
@@ -96,34 +140,6 @@ header form{
     display:inline-block;
     margin-right:50px
 }
-.workspace h2{
-    
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    width: 150%;
-    background-color: #f1f1f1;
-  }
-
-  .row {
-    margin: 0;
-    float: left;
-    height: auto;
-    padding: 10px 0 0 20px
-    }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }  
-  
-  .column {
-    width: 80%
-    padding 20px
-  }
 
   @media screen and (max-width: 600px) {
     .column {
