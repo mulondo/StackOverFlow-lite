@@ -10,16 +10,16 @@
 <body>
     <header id="myHeader">
        
-                <h1>StackoverFlow-lite</h1> 
+        <h1>StackoverFlow-lite</h1> 
                 
-                <h4>User</h4>
-                <nav>                           
-                    <button class="logout">Logout</button>                        
-                </nav>  
-                <form>
-                    <input type="text" placeholder="Search" name="search">
-                    <button type="submit" name="serach_button">Search</button>
-            </form>
+        <h4>User</h4>
+        <nav>                           
+            <button class="logout">Logout</button>                        
+        </nav>  
+        <form>
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit" name="serach_button">Search</button>
+        </form>
     </header>
 
     <div class="container">
@@ -28,9 +28,21 @@
                 
             </aside>
                 <article>
-                      
-                      
+                    <textarea readonly>Here is the the full description of the question that has been clicked.
+                    </textarea>            
+
+                    <button class="answerbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Asnwer</button>
+
+                    <div id="id01" class="modal">  
+                        <form class="modal-content animate" action="">
+                            <textarea name="answer"></textarea>          
+                            <button type="submit">Post</button>
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        
+                        </form>
+                    </div>
                 </article>
+                
         </section> 
     </div>
         
@@ -45,6 +57,16 @@
                 header.classList.add("sticky");
             } else {
                 header.classList.remove("sticky");
+            }
+        }
+
+        // Get the modal id
+        var modal = document.getElementById('id01');
+
+        // on clicking outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
         }
     </script>
