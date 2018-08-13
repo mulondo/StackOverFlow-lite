@@ -31,14 +31,14 @@
                     <textarea readonly>Here is the the full description of the question that has been clicked.
                     </textarea>            
 
-                    <button class="answerbtn" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Asnwer</button>
+                    <button class="answerbtn" onclick="document.getElementById('answer_modal').style.display='block'" style="width:auto;">Asnwer</button>
 
-                    <div id="id01" class="modal">  
+                    <div id="answer_modal" class="modal">  
                         <form class="modal-content animate" action="">
                             <textarea class="modal-textarea" name="answer"></textarea>
                             <span>   
                                 <button class="postanswer_btn" type="submit">Post</button>
-                                <button class="cancel_btn" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <button class="cancel_btn" type="button" onclick="document.getElementById('answer_modal').style.display='none'" class="cancelbtn">Cancel</button>
                             </span>                            
                         </form>
                     </div>
@@ -62,7 +62,7 @@
         }
 
         // Get the modal id
-        var modal = document.getElementById('id01');
+        var modal = document.getElementById('answer_modal');
 
         // on clicking outside the modal, close it
         window.onclick = function(event) {
