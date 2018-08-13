@@ -25,12 +25,33 @@
     <div class="container">
        <section>
             <aside>
-
+                <h2>My Posts</h2>
             </aside>
                 <article>
                     <div class="workspace_btn">
-                        <button class="ask_button">Ask questions</button>
+                        <button class="ask_button" onclick="document.getElementById('ask').style.display='block'" style="width:auto;">Ask questions</button>
                         <button class="most_answeredbutton">Most answered questions</button>
+                        <div id="ask" class="modal">  
+                            <form class="modal-content animate" action="/action_page.php">
+                                  <div class="imgcontainer">
+                                    <span onclick="document.getElementById('ask').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
+                                    </div>                                                                
+                                    <label for="subject"><b>Subject</b></label>
+                                    <input id="subject" type="text" placeholder="Subject" name="subject" required> 
+                                    <label for="subject"><b>Description</b></label>
+                                    <textarea placeholder="Description of the question"></textarea>
+                                    <label for="subject"><b>Choose type of question</b></label><br>                    
+                                    <input type="radio" name="gender" value="male">Java<br>
+                                    <input type="radio" name="gender" value="female">python<br>
+                                    <input type="radio" name="java_script" value="Java script">Java script<br>
+                                    <input type="radio" name="php" value="PHP">Php<br>
+                                    <input type="radio" name="others" value="other">Others<br>
+                                    <span>
+                                    <button type="button" onclick="document.getElementById('ask').style.display='none'" class="cancelbtn">Cancel</button>                             
+                                    <button type="submit">Post</button>                                                              
+                                    </span>                                 
+                            </form>
+                        </div>
                     </div>
                     <h2>Questions</h2>
 
@@ -73,6 +94,16 @@
                 header.classList.add("sticky");
             } else {
                 header.classList.remove("sticky");
+            }
+        }
+
+                // Get the modal
+        var modal = document.getElementById('ask');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
             }
         }
     </script>
