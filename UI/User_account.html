@@ -25,55 +25,56 @@
     <div class="container">
        <section>
             <aside>
-                
+
             </aside>
                 <article>
-                        <div class="workspace_btn">
-                                <button class="ask_button">Ask questions</button>
-                                <button class="most_answeredbutton">Most answered questions</button>
+                    <div class="workspace_btn">
+                        <button class="ask_button">Ask questions</button>
+                        <button class="most_answeredbutton">Most answered questions</button>
+                    </div>
+                    <h2>Questions</h2>
+
+                    <div class="column">
+                        <div class="row">
+                            <div class="card">
+                                <h3 name="">Question 1</h3>
+                                <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>                                                        
                             </div>
-                            <h2>Questions</h2>
-                        <div class="column">
-                            <div class="row">
-                                <div class="card">
-                                    <h3 name="">Question 1</h3>
-                                    <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>                                                        
-                                </div>
-                            </div>
+                        </div>
                             
+                        <div class="row">
+                            <div class="card">
+                                <h3>Question 2</h3>
+                                <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                            </div>
+                        </div> 
+            
                             <div class="row">
                                 <div class="card">
                                     <h3>Question 2</h3>
                                     <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
                                     <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
                                 </div>
-                            </div> 
-            
-                            <div class="row">
-                                    <div class="card">
-                                        <h3>Question 2</h3>
-                                        <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
-                                        <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
-                                    </div>
-                                </div>                                
-                        </div>
+                            </div>                                
+                    </div>
                 </article>
         </section> 
     </div>
         
-<script>
-window.onscroll = function() {myFunction()};
+    <script>
+        window.onscroll = function() {myFunction()};
 
-var header = document.getElementById("myHeader");
-var sticky = header.offsetTop;
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-</script>
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
 
 </body>
