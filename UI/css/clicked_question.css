@@ -1,0 +1,97 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin:0;
+    padding:0
+}
+
+.container{
+    width: 100%;
+    margin:auto;
+    overflow: hidden;
+}
+
+/* header style*/
+header{
+    color: #E6E6E6;
+    background-color: #0B4C5F;
+    width:100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+header a{
+   color: #E6E6E6;
+   padding:2px
+}
+
+header nav{
+    float: right;
+    margin-top: -60px;  
+}
+
+header h4{
+    color: #B45F04;
+    margin-top: -50px;
+    margin-right: 125px;
+    padding:2px;
+    float:right;
+}
+
+header h1{
+    padding:0 0 0 30px
+}
+
+header nav a:hover{
+    color: #B45F04
+}
+
+header form{
+    margin-top: -50px;
+    float: right;
+    margin-right: 180px
+}
+
+/* logout button style */
+.logout{
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.logout:hover{
+    color: #B45F04
+}
+
+article{    
+    background-color: #fff; 
+    margin-left: 10px;
+    padding: 10px;
+    width: 80%
+}
+
+section {   
+    display: flex;
+    padding: 10px
+}
+
+/* Style the side navigation menu */
+aside {
+    background: #ccc;
+    padding: 20px;
+    width: 250px;    
+    height: 500px
+}
+
+/* make a any tag element static */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
