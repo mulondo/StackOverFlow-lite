@@ -1,0 +1,12 @@
+language: python
+python:
+- "2.7.12"
+install:
+- pip install -r requirements.txt
+scripts:
+- pytest --cov=.
+- coverage
+- coverage report
+- coveralls
+after_success:
+- coverall
