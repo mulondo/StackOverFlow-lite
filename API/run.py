@@ -8,7 +8,6 @@ from flask import Flask
 from app.modal import *
 from app.views import *
 
-
 class Server:
     """Create flask object to start the server"""
 
@@ -18,7 +17,6 @@ class Server:
         app.config.update(config.__dict__ or {})
         Routes.generate(app)
         return app
-
 
 App = Server().create_app(config=DevelopmentConfig)
 
