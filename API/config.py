@@ -1,9 +1,10 @@
+"""contains all configuration"""
 import os
 
 
-class Config(object):
+class Config:
     """
-    This is the parent configurations to be inherited from
+    This is the parent configuration class to be inherited from
     """
     DEBUG = False
     SECRET = os.getenv('SECRET')
@@ -13,7 +14,8 @@ class Config(object):
 
 class DevelopmentConfig(Config):
     """
-    The configuration for the development environment"""
+    development environment configuration 
+    """
     DEBUG = True
     SECRET = 'efa27950565790fbaecfb5fb64b84a6a7c48d06d'
     SECRET_KEY = 'e5ac358c-f0bf-11e5-9e39-d3b532c10a28'
@@ -31,8 +33,7 @@ class TestingConfig(Config):
 
 class ProductionConfig(Config):
     """
-    Extra configuration for Production
+    more configuration for Production
     """
     DEBUG = False
     TESTING = False
-
