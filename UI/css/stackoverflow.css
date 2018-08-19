@@ -98,10 +98,43 @@ aside {
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 16px;
-    width: 140%;
+    width: 900px;
+    height: auto;
     background-color: #f1f1f1;
   }
+  .card #deleteqn{
+    margin-top: -46px;
+    color:#0B4C5F;
+    
+  }
+  .card #deleteqn:hover{
+    color: #B45F04;
+    cursor: pointer;
+  }
+.card #addpost{
+    margin-left: 150px;
+    color:#0B4C5F;
+}
+.card #addpost:hover{
+    color: #B45F04;
+}
 
+.card #answers{
+    color:#0B4C5F;
+    cursor: pointer;
+}
+.card #answers:hover{
+    color: #B45F04;
+}
+.card #post_answer{
+    color:#0B4C5F;
+    cursor: pointer;
+    margin-left: 90px;
+    margin-top: -46px
+}
+.card #post_answer:hover{
+    color: #B45F04;
+}
 
 .row{
     margin: 0;
@@ -150,10 +183,25 @@ aside {
     box-sizing: border-box;
 }
 
+#question{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
 span{
     float: right;
     padding: 30px 20px;
     margin-top: -35px;    
+}
+
+
+
+h5{
+    margin-top: -20px
 }
 
 textarea{
