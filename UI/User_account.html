@@ -54,12 +54,27 @@
                         </div>
                     </div>
                     <h2>Questions</h2>
-
+                    <div id="answer" class="modal">  
+                            <form class="modal-content animate" action="/action_page.php">
+                                  <div class="imgcontainer">
+                                    <span onclick="document.getElementById('answer').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
+                                    </div>       
+                                    <label for="question"><b>Question</b></label>
+                                    <input id="question" type="text" name="question" required> 
+                                    <label for="subject"><b>Description</b></label>
+                                    <textarea placeholder="Description of the question"></textarea>                                    
+                                    <span>
+                                    <button type="button" onclick="document.getElementById('answer').style.display='none'" class="cancelbtn">Cancel</button>                             
+                                    <button type="submit">Post</button>                                                              
+                                    </span>                                 
+                            </form>
+                        </div>
                     <div class="column">
                         <div class="row">
                             <div class="card">
                                 <h3 name="">Question 1</h3>
-                                <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>                                                        
+                                <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>
+                                <a href="#"><h4 onclick="document.getElementById('answer').style.display='block'">Post your Answer</h4></a>                                                      
                             </div>
                         </div>
                             
@@ -68,6 +83,7 @@
                                 <h3>Question 2</h3>
                                 <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
                                 <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                <a href="#"><h4 onclick="document.getElementById('answer').style.display='block'">Post your Answer</h4></a> 
                             </div>
                         </div> 
             
@@ -76,6 +92,7 @@
                                     <h3>Question 2</h3>
                                     <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
                                     <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                    <a href="#"><h4 onclick="document.getElementById('answer').style.display='block'">Post your Answer</h4></a> 
                                 </div>
                             </div>                                
                     </div>
@@ -98,11 +115,14 @@
         }
 
                 // Get the modal
-        var modal = document.getElementById('ask');
-
+        var modal_ask_question = document.getElementById('ask');
+        var modal_answer_question = document.getElementById('answer');
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
+            if (event.target == modal_ask_question) {
+                modal.style.display = "none";
+            }
+            if(event.target == modal_answer_question) {
                 modal.style.display = "none";
             }
         }
