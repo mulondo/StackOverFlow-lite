@@ -27,6 +27,8 @@
        <section>
             <aside>
                 <h2>My Posts</h2>
+                <h4>Questions</h4>
+                <h4>Answers</h4>
             </aside>
                 <article>
                     <div class="workspace_btn">
@@ -55,12 +57,28 @@
                         </div>
                     </div>
                     <h2>Questions</h2>
-
+                    <div id="answer" class="modal">  
+                        <form class="modal-content animate" action="/action_page.php">
+                              <div class="imgcontainer">
+                                <span onclick="document.getElementById('ask').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
+                                </div>                                                                
+                                <label for="subject"><b>Question</b></label>
+                                <input id="question" type="text" name="question" readonly> 
+                                <label for="subject"><b>Answer</b></label>
+                                <textarea placeholder="Description of the question"></textarea>                    
+                                <span>
+                                <button type="button" onclick="document.getElementById('answer').style.display='none'" class="cancelbtn">Cancel</button>                             
+                                <button type="submit">Post</button>                                                              
+                                </span>                                 
+                        </form>
+                    </div>
                     <div class="column">
                         <div class="row">
                             <div class="card">
                                 <h3 name="">Question 1</h3>
-                                <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>                                                        
+                                <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>
+                                <h4>By</h4><h5>Moses</h5>
+                                <a href="#" onclick="document.getElementById('answer').style.display='block'" style="width:auto;"><h4>Post your Answer</h4></a>                                                      
                             </div>
                         </div>
                             
@@ -69,6 +87,9 @@
                                 <h3>Question 2</h3>
                                 <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
                                 <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                <h4>By</h4><h5>James</h5>
+                                <a href="#" onclick="document.getElementById('answer').style.display='block'" style="width:auto;"><h4>Post your Answer</h4></a>
+                                
                             </div>
                         </div> 
             
@@ -77,6 +98,8 @@
                                     <h3>Question 2</h3>
                                     <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
                                     <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                    <h4>By</h4><h5>Peter</h5>
+                                    <a href="#" onclick="document.getElementById('answer').style.display='block'" style="width:auto;"><h4>Post your Answer</h4></a>
                                 </div>
                             </div>                                
                     </div>
@@ -99,11 +122,15 @@
         }
 
                 // Get the modal
-        var modal = document.getElementById('ask');
+        var ask_modal = document.getElementById('ask');
+        var answer_modal = document.getElementById('answer');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
+            if (event.target == ask_modal) {
+                modal.style.display = "none";
+            }
+            if (event.target == answer_modal) {
                 modal.style.display = "none";
             }
         }
