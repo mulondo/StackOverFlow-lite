@@ -15,7 +15,7 @@ class Server:
         """performs configurations"""
         app = Flask(__name__)
         app.config.update(config.__dict__ or {})
-        Routes.generate(app)
+        Routes.generate_route(app)
         return app
 
 APP = Server().create_app(config=DevelopmentConfig)
