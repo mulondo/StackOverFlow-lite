@@ -2,9 +2,9 @@
 runs the application
 """
 from flask import Flask
-from config import DevelopmentConfig, ProductionConfig
-from app.modal import *
-from app.views import *
+from config import DevelopmentConfig
+from app.modal import Datastore
+from app.views import Routes
 
 
 class Server:
