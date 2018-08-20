@@ -114,6 +114,7 @@ aside {
 .card #addpost{
     margin-left: 150px;
     color:#0B4C5F;
+    cursor:pointer;
 }
 .card #addpost:hover{
     color: #B45F04;
@@ -130,7 +131,8 @@ aside {
     color:#0B4C5F;
     cursor: pointer;
     margin-left: 90px;
-    margin-top: -46px
+    margin-top: -46px;
+    cursor:pointer
 }
 .card #post_answer:hover{
     color: #B45F04;
