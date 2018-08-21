@@ -35,7 +35,7 @@
                         <button class="ask_button" onclick="document.getElementById('ask').style.display='block'" style="width:auto;">Ask questions</button>
                         <button class="most_answeredbutton">Most answered questions</button>
                         <div id="ask" class="modal">  
-                            <form class="modal-content animate" action="/action_page.php">
+                            <form class="modal-content animate" action="">
                                   <div class="imgcontainer">
                                     <span onclick="document.getElementById('ask').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
                                     </div>                                                                
@@ -58,7 +58,7 @@
                     </div>
                     <h2>My posted Questions</h2>
                     <div id="answer" class="modal">  
-                        <form class="modal-content animate" action="/action_page.php">
+                        <form class="modal-content animate" action="">
                               <div class="imgcontainer">
                                 <span onclick="document.getElementById('ask').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
                                 </div>                                                                
@@ -80,9 +80,9 @@
                                     <h4 id="addpost" onclick="document.getElementById('answer').style.display='block'" style="width:auto;">Add a Post to Answer</h4>
                                     <h4 id="deleteqn">Delete question</h4>                                                                       
                                         <div class="answer_dropdown">
-                                            <h4 onclick="Functionclick()" id="answers">Answers</h4> 
+                                            <h4 onclick="onclick_anwser()" id="answers">Answers</h4> 
                                             <h4 name="answer_number" id="answer_number">5</h4>                                         
-                                              <div id="myDropdown" class="answer_dropdown-content">                                        
+                                              <div id="answers_dropdown" class="answer_dropdown-content">                                        
                                                
                                                         <div class="answer_row">
                                                                 <div class="answer_card">
@@ -169,11 +169,9 @@
 
         /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
-        function Functionclick() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-
-
+        function onclick_anwser() {
+            document.getElementById("answers_dropdown").classList.toggle("show");
+        } 
         window.onscroll = function() {myFunction()};
 
         var header = document.getElementById("myHeader");
