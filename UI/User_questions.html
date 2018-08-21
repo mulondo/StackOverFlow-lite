@@ -6,6 +6,7 @@
     <title>StackOverFlow-lite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/stackoverflow.css" />
+    <link rel="stylesheet" href="./css/stackoverflow2.css" />
 </head>
 <body>
     <header id="myHeader">
@@ -13,8 +14,7 @@
                 <h1>StackoverFlow-lite</h1> 
                 
                 <h4>User</h4>
-                <nav>                           
-                    
+                <nav>                   
                     <input type="button" class="logout" onclick="window.location='index.html'" value="Logout">                       
                 </nav>  
                 <form>
@@ -78,9 +78,63 @@
                                 <h3 name="">Question 1</h3>
                                 <p>how to sort an array of numbers in desending order with out using complex sort algorithms in python </p>
                                     <h4 id="addpost" onclick="document.getElementById('answer').style.display='block'" style="width:auto;">Add a Post to Answer</h4>
-                                    <h4 id="deleteqn">Delete question</h4>
-                                    <h4 id="answers">Answers</h4>
-                                                                                     
+                                    <h4 id="deleteqn">Delete question</h4>                                                                       
+                                        <div class="answer_dropdown`">
+                                            <h4 onclick="Functionclick()" id="answers">Answers</h4>                                           
+                                              <div id="myDropdown" class="answer_dropdown-content">                                        
+                                               
+                                                        <div class="answer_row">
+                                                                <div class="answer_card">
+                                                                    <h3>Answer 1</h3>
+                                                                    <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                                                    <form>
+                                                                            <input type="checkbox" value="accepted" name="accept_answer"><input type="submit" value="Accept answer">
+                                                                    </form>                                                            
+                                                                </div>
+                                                            </div>                                              
+                                                
+                                                        <div class="answer_row">
+                                                                <div class="answer_card">
+                                                                    <h3>Answer 2</h3>
+                                                                    <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                                                    <form>
+                                                                            <input type="checkbox" value="accepted" name="accept_answer"><input type="submit" value="Accept answer">
+                                                                    </form>                                                             
+                                                                </div>
+                                                            </div>
+
+                                                        <div class="answer_row">
+                                                                <div class="answer_card">
+                                                                    <h3>Answer 3</h3>
+                                                                    <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                                                    <form>
+                                                                            <input type="checkbox" value="accepted" name="accept_answer"><input type="submit" value="Accept answer">
+                                                                    </form>                                                      
+                                                                </div>
+                                                        </div>                                   
+                                                
+                                                        <div class="answer_row">
+                                                                <div class="answer_card">
+                                                                    <h3>Answer 4</h3>
+                                                                    <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                                                    <form>
+                                                                        <input type="checkbox" value="accepted" name="accept_answer"><input type="submit" value="Accept answer">
+                                                                    </form>                                                   
+                                                                </div>
+                                                        </div>                                         
+                                                
+                                                        <div class="answer_row">
+                                                                <div class="answer_card">
+                                                                    <h3>Answer 5</h3>
+                                                                    <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>
+                                                                    <form>
+                                                                            <input type="checkbox" value="accepted" name="accept_answer"><input type="submit" value="Accept answer">
+                                                                    </form>                                                      
+                                                                </div>
+                                                        </div>
+                                                
+                                              </div>
+                                        </div>                                                                                     
                             </div>
                         </div>                     
                         
@@ -100,6 +154,29 @@
     </div>
         
     <script>
+
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function Functionclick() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function filterFunction() {
+            var input, filter, ul, li, a, i;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("myDropdown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+
+
         window.onscroll = function() {myFunction()};
 
         var header = document.getElementById("myHeader");
