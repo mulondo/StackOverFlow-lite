@@ -116,6 +116,13 @@ aside {
     color:#0B4C5F;
     cursor:pointer;
 }
+/*.card #question_postedby{}*/
+
+.card #question_author{
+    margin-top: -45px;
+    margin-left: 90px;
+    color: chocolate
+}
 .card #addpost:hover{
     color: #B45F04;
 }
@@ -130,12 +137,17 @@ aside {
 .card #post_answer{
     color:#0B4C5F;
     cursor: pointer;
-    margin-left: 90px;
+    margin-left: 130px;
     margin-top: -46px;
     cursor:pointer
 }
 .card #post_answer:hover{
     color: #B45F04;
+}
+.card #answernumber{
+    color:chocolate;
+    margin-top: -44px;
+    margin-left: 77px
 }
 
 .row{
