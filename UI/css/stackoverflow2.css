@@ -17,6 +17,11 @@
     overflow: scroll
 }
 
+#answer_number{
+    margin-top: -45px;
+    margin-left: 75px;
+    color:chocolate
+}
 
 .answer_card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -24,6 +29,15 @@
     width: 830px;
     height: auto;
     background-color: #f1f1f1;
+  }
+  .answer_card #postedby{
+    margin-top: -28px;
+    margin-left: 200px
+  }
+  .answer_card #answer_author{
+    color: chocolate;
+    margin-top: -45px;
+    margin-left: 290px
   }
 
   .answer_row{
