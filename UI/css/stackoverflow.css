@@ -1,0 +1,301 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin:0;
+    padding:0
+}
+
+.container{
+    width: 100%;
+    margin:auto;
+    overflow: hidden;
+}
+
+/* header */
+header{
+    color: #E6E6E6;
+    background-color: #0B4C5F;
+    width:100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+header a{
+   color: #E6E6E6;
+   padding:2px
+}
+
+header nav{
+    float: right;
+    margin-top: -60px;  
+}
+
+header h4{
+    color: #B45F04;
+    margin-top: -50px;
+    margin-right: 125px;
+    padding:2px;
+    float:right;
+}
+
+header h1{
+    padding:0 0 0 30px
+}
+
+header nav a:hover{
+    color: #B45F04
+}
+
+header form{
+    margin-top: -50px;
+    float: right;
+    margin-right: 180px
+}
+
+.logout{
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.logout:hover{
+    color: #B45F04
+}
+
+article{    
+    background-color: #fff; 
+    margin-left: 10px;
+    padding: 10px;
+    width: 80%
+}
+
+section {   
+    display: flex;
+    padding: 10px
+}
+
+/* Style the navigation menu */
+aside {
+    background: #ccc;
+    padding: 20px;
+    width: 250px;    
+    height: 500px
+}
+
+/* Style the list inside the menu */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    width: 900px;
+    height: auto;
+    background-color: #f1f1f1;
+  }
+  .card #deleteqn{
+    margin-top: -46px;
+    color:#0B4C5F;
+    
+  }
+  .card #deleteqn:hover{
+    color: #B45F04;
+    cursor: pointer;
+  }
+.card #addpost{
+    margin-left: 150px;
+    color:#0B4C5F;
+    cursor:pointer;
+}
+/*.card #question_postedby{}*/
+
+.card #question_author{
+    margin-top: -45px;
+    margin-left: 90px;
+    color: chocolate
+}
+.card #addpost:hover{
+    color: #B45F04;
+}
+
+.card #answers{
+    color:#0B4C5F;
+    cursor: pointer;
+}
+.card #answers:hover{
+    color: #B45F04;
+}
+.card #post_answer{
+    color:#0B4C5F;
+    cursor: pointer;
+    margin-left: 130px;
+    margin-top: -46px;
+    cursor:pointer
+}
+.card #post_answer:hover{
+    color: #B45F04;
+}
+.card #answernumber{
+    color:chocolate;
+    margin-top: -44px;
+    margin-left: 77px
+}
+
+.row{
+    margin: 0;
+    float: left;
+    height: auto;
+    padding: 10px
+    }
+  
+  
+  .column {
+    width: 100%
+    padding 10px
+  }
+
+  .ask_button{
+    color: #fff;
+    background-color: #0B4C5F;
+    block-size: 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top:25px
+}
+
+.most_answeredbutton{
+    color: #fff;
+    background-color: #0B4C5F;
+    block-size: 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin-top:25px;
+
+}
+
+.workspace_btn{
+    padding:23px;
+    display:inline-block;
+    margin-right:50px
+}
+
+ #subject{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#question{
+    width: 98%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+span{
+    float: right;
+    padding: 30px 20px;
+    margin-top: -35px;    
+}
+
+
+
+h5{
+    margin-top: -20px
+}
+
+textarea{
+    width: 98%;
+    height: 100px
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+    height: 450px;
+    padding:10px 5px 0 5px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+      margin-left: 0
+    }
+  }

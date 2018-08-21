@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StackOverFlow-lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/clicked_question.css" />
+</head>
+<body>
+    <header id="myHeader">
+       
+        <h1>StackoverFlow-lite</h1> 
+                
+        <h4>User</h4>
+        <nav>                           
+            <button name="logout" class="logout">Logout</button>                        
+        </nav>  
+        <form>
+            <input type="text" placeholder="Search" name="search">
+            <button type="submit" name="serach_button">Search</button>
+        </form>
+    </header>
+
+    <div class="container">
+       <section>   
+            <aside>
+                <h2>My posts</h2>
+            </aside>
+                <article>
+                    <textarea readonly>Here is the the full description of the question that has been clicked.
+                    </textarea>            
+
+                    <button class="answerbtn" onclick="document.getElementById('answer_modal').style.display='block'" style="width:auto;">Asnwer</button>
+
+                    <div id="answer_modal" class="modal">  
+                        <form class="modal-content animate" action="">
+                            <textarea class="modal-textarea" name="answer"></textarea>
+                            <span>   
+                                <button class="postanswer_btn" type="submit">Post</button>
+                                <button class="cancel_btn" type="button" onclick="document.getElementById('answer_modal').style.display='none'" class="cancelbtn">Cancel</button>
+                            </span>                            
+                        </form>
+                    </div>
+                </article>
+                
+        </section> 
+    </div>
+        
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+
+        // Get the modal id
+        var modal = document.getElementById('answer_modal');
+
+        // on clicking outside the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>

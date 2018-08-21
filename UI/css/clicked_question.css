@@ -1,0 +1,161 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin:0;
+    padding:0
+}
+
+.container{
+    width: 100%;
+    margin:auto;
+    overflow: hidden;
+}
+
+
+/* header style*/
+header{
+    color: #E6E6E6;
+    background-color: #0B4C5F;
+    width:100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+header a{
+   color: #E6E6E6;
+   padding:2px
+}
+
+header nav{
+    float: right;
+    margin-top: -60px;  
+}
+
+header h4{
+    color: #B45F04;
+    margin-top: -50px;
+    margin-right: 125px;
+    padding:2px;
+    float:right;
+}
+
+header h1{
+    padding:0 0 0 30px
+}
+
+header nav a:hover{
+    color: #B45F04
+}
+
+header form{
+    margin-top: -50px;
+    float: right;
+    margin-right: 180px
+}
+
+/* logout button style */
+.logout{
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.logout:hover{
+    color: #B45F04
+}
+
+/* style for article */
+article{    
+    background-color: #fff; 
+    margin-left: 10px;
+    padding: 10px;
+    width: 80%
+}
+
+.answerbtn{
+    background-color: #0B4C5F;
+    color: #fff;
+    float: right;
+    margin-top: 5px;
+    margin-right:88px
+
+}
+.postanswer_btn{
+    float:right;
+    margin-right: 20px
+}
+
+.cancel_btn{
+    float:right;
+    margin-right: 30px
+}
+
+span{
+    float: right;
+    padding: 30px 20px;
+    margin-top: -35px;    
+}
+
+article textarea{
+    width: 90%;
+    height: 45%;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 60px;
+    top: -60px;
+    width: 100%; 
+    overflow: auto;
+    margin-top: 300px;    
+    padding-top: 60px;
+    float:right
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */    
+    width: 62%; /* Could be more or less, depending on screen size */
+    height:80px
+}
+
+.modal-textarea{
+    width: 98%;
+    height:60%
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+section {   
+    display: flex;
+    padding: 10px
+}
+
+/* Style the side navigation menu */
+aside {
+    background: #ccc;
+    padding: 20px;
+    width: 250px;    
+    height: 500px
+}
+
+/* make a any tag element static */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+ 
