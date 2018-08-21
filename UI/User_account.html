@@ -6,6 +6,7 @@
     <title>StackOverFlow-lite</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/stackoverflow.css" />
+    <link rel="stylesheet" href="./css/stackoverflow2.css" />
 </head>
 <body>
     <header id="myHeader">
@@ -14,7 +15,8 @@
                 
                 <h4>User</h4>
                 <nav>                           
-                    <button class="logout">Logout</button>                        
+                    
+                    <input type="button" class="logout" onclick="window.location='index.html'" value="Logout">                       
                 </nav>  
                 <form>
                     <input type="text" placeholder="Search" name="search">
@@ -26,13 +28,14 @@
        <section>
             <aside>
                 <h2>My Posts</h2>
+                <a href="User_questions.html"><h4>Questions</h4></a>                
             </aside>
                 <article>
                     <div class="workspace_btn">
                         <button class="ask_button" onclick="document.getElementById('ask').style.display='block'" style="width:auto;">Ask questions</button>
                         <button class="most_answeredbutton">Most answered questions</button>
                         <div id="ask" class="modal">  
-                            <form class="modal-content animate" action="/action_page.php">
+                            <form class="modal-content animate" action="">
                                   <div class="imgcontainer">
                                     <span onclick="document.getElementById('ask').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
                                     </div>                                                                
@@ -54,36 +57,111 @@
                         </div>
                     </div>
                     <h2>Questions</h2>
-
+                    <div id="answer" class="modal">  
+                        <form class="modal-content animate" action="">
+                              <div class="imgcontainer">
+                                <span onclick="document.getElementById('ask').style.display='none'" class="close" title="Close Modal">&times;</span>                                    
+                                </div>                                                                
+                                <label for="subject"><b>Question</b></label>
+                                <input id="question" type="text" name="question" readonly> 
+                                <label for="subject"><b>Answer</b></label>
+                                <textarea placeholder="Description of the question"></textarea>                    
+                                <span>
+                                <button type="button" onclick="document.getElementById('answer').style.display='none'" class="cancelbtn">Cancel</button>                             
+                                <button type="submit">Post</button>                                                              
+                                </span>                                 
+                        </form>
+                    </div>
                     <div class="column">
                         <div class="row">
                             <div class="card">
                                 <h3 name="">Question 1</h3>
-                                <p id="demo" onclick="myfunction">Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>                                                        
+                                <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>
+                                <h4 id="question_postedby">Posted by:</h4><h4 id="question_author">Timo</h4>
+                                <h4 onclick="onclick_anwser()" id="answers">Answers</h4>
+                                <h4 id="answernumber">5</h4>
+                                <h4 onclick="document.getElementById('answer').style.display='block'" style="width:auto;"id="post_answer">Post your Answer</h4>
+                                <div id="answers_dropdown" class="answer_dropdown-content">                                        
+                                               
+                                    <div class="answer_row">
+                                            <div class="answer_card">
+                                                <h3>Answer 1</h3>
+                                                <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>                                                
+                                                <h4 id="postedby">Posted by:</h4>
+                                                <h4 id="answer_author">Moses</h4>                                                          
+                                            </div>
+                                        </div>                                              
+                            
+                                    <div class="answer_row">
+                                            <div class="answer_card">
+                                                <h3>Answer 2</h3>
+                                                <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>                                              
+                                                <h4 id="postedby">Posted by:</h4>
+                                                <h4 id="answer_author">James</h4>                                                            
+                                            </div>
+                                        </div>
+
+                                    <div class="answer_row">
+                                            <div class="answer_card">
+                                                <h3>Answer 3</h3>
+                                                <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>                                                
+                                                <h4 id="postedby">Posted by:</h4>
+                                                <h4 id="answer_author">Brian</h4>                                                      
+                                            </div>
+                                    </div>                                   
+                            
+                                    <div class="answer_row">
+                                            <div class="answer_card">
+                                                <h3>Answer 4</h3>
+                                                <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>                                                
+                                                <h4 id="postedby">Posted by:</h4>
+                                                <h4 id="answer_author">Peter</h4>                                                   
+                                            </div>
+                                    </div>                                         
+                            
+                                    <div class="answer_row">
+                                            <div class="answer_card">
+                                                <h3>Answer 5</h3>
+                                                <p>How to convert a string to an integer in python 2.7.2 version data needs to be corrected to remove outliers or obvious instrument or data entry </p>                                                
+                                                <h4 id="postedby">Posted by:</h4>
+                                                <h4 id="answer_author">John</h4>                                                      
+                                            </div>
+                                    </div>
+                            
+                          </div>
                             </div>
                         </div>
                             
                         <div class="row">
-                            <div class="card">
-                                <h3>Question 2</h3>
-                                <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
-                                <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
-                            </div>
-                        </div> 
+                                <div class="card">
+                                    <h3 name="">Question 1</h3>
+                                    <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>
+                                    <h4 id="question_postedby">Posted by:</h4><h4 id="question_author">Moses</h4>
+                                    <h4 id="answers">Answers</h4>
+                                    <h4 id="answernumber">0</h4>
+                                    <h4 onclick="document.getElementById('answer').style.display='block'" style="width:auto;"id="post_answer">Post your Answer</h4>
+                                </div>
+                            </div> 
             
                             <div class="row">
-                                <div class="card">
-                                    <h3>Question 2</h3>
-                                    <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
-                                    <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry </p>
-                                </div>
-                            </div>                                
+                                    <div class="card">
+                                        <h3 name="">Question 1</h3>
+                                        <p>Raw data needs to be corrected to remove outliers or obvious instrument or data entry</p>
+                                        <h4 id="question_postedby">Posted by:</h4><h4 id="question_author">Hope</h4>
+                                        <h4 id="answers">Answers</h4>
+                                        <h4 id="answernumber">0</h4>
+                                        <h4 onclick="document.getElementById('answer').style.display='block'" style="width:auto;"id="post_answer">Post your Answer</h4>
+                                    </div>
+                                </div>                               
                     </div>
                 </article>
         </section> 
     </div>
         
     <script>
+         function onclick_anwser() {
+            document.getElementById("answers_dropdown").classList.toggle("show");
+        }
         window.onscroll = function() {myFunction()};
 
         var header = document.getElementById("myHeader");
@@ -98,11 +176,15 @@
         }
 
                 // Get the modal
-        var modal = document.getElementById('ask');
+        var ask_modal = document.getElementById('ask');
+        var answer_modal = document.getElementById('answer');
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function(event) {
-            if (event.target == modal) {
+            if (event.target == ask_modal) {
+                modal.style.display = "none";
+            }
+            if (event.target == answer_modal) {
                 modal.style.display = "none";
             }
         }
