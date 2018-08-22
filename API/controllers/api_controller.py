@@ -8,21 +8,26 @@ class Api_controller(MethodView):
     """ contains methods that perform the logic"""
     @staticmethod
     def get(question_id=None):
-        if str(request.url_rule)=="api/v1/questions":
+        if str(request.url_rule)=="/api/v1/questions":
             return Api_controller.get_all_questions()
-        if str(request.url_rule)=="api/v1/questions/<int:QuestionID>":
+        if str(request.url_rule)=="/api/v1/questions/<int:question_id>":
             return Api_controller.get_a_question(question_id)
     
     @staticmethod
     def get_all_questions():
-        return jsonify({'question':questions})
+        return jsonify({'questions':questions})
     
     @staticmethod
-    def get_a_question(question_id):
-        for question in questions:
-            if question['QuestionID']==question_id:
-                return jsonify(question)
-            return jsonify({'Message':'The question is not found'})
+    def get_a_question(question_id):        
+            for one_question in questions:
+                if one_question['QuestionID'] == question_id:
+                    return jsonify(one_question)
+                else:
+                    return jsonify({'question':question_})
+            # return all questions
+                     
+            #else:
+                #return jsonify({'Message':'The question is not found'})
     
    
 
@@ -79,7 +84,7 @@ class Api_controller(MethodView):
                     'correctness':request_data['correctness'],
                     'answer_post_date':request_data['answer_post_date']
                 }
-                question['answer'].append(post_answer)
+                question['answers'].append(post_answer)
                 
             return jsonify({'Message :':'The resource not found'})
 
