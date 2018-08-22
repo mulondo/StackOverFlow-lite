@@ -8,19 +8,23 @@ class Api_controller(MethodView):
     """ contains methods that perform the logic"""
     @staticmethod
     def get(question_id=None):
-        """ gets a specific question"""
-        if question_id:
-            question = {}
-            for item in questions:
-                if item['question_id'] == id:
-                    question = {
-                        'questionID': item['QuestionID'],
-                        'question': item['QuestionName']
-                    }
-
-            return jsonify(question)
-        else:
-            return jsonify({'questions': questions})
+        if str(request.url_rule)=="api/v1/questions":
+            return Api_controller.get_all_questions()
+        if str(request.url_rule)=="api/v1/questions/<int:QuestionID>":
+            return Api_controller.get_a_question(question_id)
+    
+    @staticmethod
+    def get_all_questions():
+        return jsonify({'question':questions})
+    
+    @staticmethod
+    def get_a_question(question_id):
+        for question in questions:
+            if question['QuestionID']==question_id:
+                return jsonify(question)
+            return jsonify({'Message':'The question is not found'})
+    
+   
 
     @staticmethod
     def post(question_id=None):
@@ -39,20 +43,26 @@ class Api_controller(MethodView):
             question = {
                 'QuestionID': request_data['QuestionID'],
                 'Question_owner': request_data['Question_owner'],
-                'Question_content': request_data['QuestionName'],
-                'answer':[answers]}      
+                'Question_Name': request_data['QuestionName'],
+                'Question_type': request_data['Question_type'],
+                'Question_description': request_data['Question_description'],
+                'Question_post_date': request_data['Question_post_date'],
+                'answer':[]
+                }      
             questions.append(question)
-            response = Response("", 201, mimetype="application/json")
-            response.headers['Location'] = "questions/" + str(request_data['QuestionID'])
-            return response
+            return jsonify({'questions':questions})
+            #response = Response("", 201, mimetype="application/json")
+            #response.headers['Location'] = "questions/" + str(request_data['QuestionID'])
+            #return response
         else:
-            bad_object = {
-                "error": "Incorrect Question Format",
-                "use": "{'QuestionID': '4',"
-                "'QuestionID': '1','QuestionName': 'hello world' }"
-            }
-            response = Response(json.dumps(bad_object), status=400, mimetype="application/json")
-            return response
+            return jsonify({'Message':'Question not created due to incorrect format'})
+           # bad_object = {
+              #  "error": "Incorrect Question Format",
+              #  "use": "{'QuestionID': '4',"
+              #  "'QuestionID': '1','QuestionName': 'hello world' }"
+           # }
+           # response = Response(json.dumps(bad_object), status=400, mimetype="application/json")
+            
 
 
 
@@ -61,13 +71,17 @@ class Api_controller(MethodView):
         """ Adds an answer for a question"""
         request_data = request.get_json()
         for question in questions:
-            if question['QuestionID'] == question_id:
-                question['Answers'].append(request_data['Answers'])
-            else:
-                continue
-            response = Response("", status="204")
-            response.headers['Location'] = "/api/v1/questions/" + str(question_id) + "/"
-            return response
+            if question['QuestionID'] == question_id:                
+                post_answer={
+                    'answerID':request_data['answerID'],
+                    'content':request_data['content'],
+                    'answer_author':request_data['answer_author'],
+                    'correctness':request_data['correctness'],
+                    'answer_post_date':request_data['answer_post_date']
+                }
+                question['answer'].append(post_answer)
+                
+            return jsonify({'Message :':'The resource not found'})
 
 
 def valid_question(question_object):
