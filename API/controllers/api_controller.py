@@ -23,11 +23,8 @@ class Api_controller(MethodView):
                 if one_question['QuestionID'] == question_id:
                     return jsonify(one_question)
                 else:
-                    return jsonify({'question':question_})
-            # return all questions
-                     
-            #else:
-                #return jsonify({'Message':'The question is not found'})
+                    return jsonify({'Message':'The question is not found'})
+        
     
    
 
