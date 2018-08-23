@@ -1,6 +1,5 @@
 from flask import json
 from unittest import TestCase
-from config import DevelopmentConfig
 from run import APP
 
 class TestRoutes(TestCase):
@@ -27,7 +26,7 @@ class TestRoutes(TestCase):
 
     def test_post_a_question(self):
         """ tests for posting a question """
-        result = self.client().post('/api/v1/questions', data=json.dumps(dict(QuestionID=2, QuestionName="how sort an array", Question_owner="paul", Question_type="python", Question_description="how to test in python", Question_post_date="02/04/2018", answer="[]")), content_type='application/json')
+        result = self.client().post('/api/v1/questions', data=json.dumps(dict(QuestionID=2, QuestionName="how sort an array", Question_author="paul", Question_description="how to test in python", Question_date="02/04/2018",)), content_type='application/json')
         self.assertEqual(result.status_code, 201) 
 
     def test_post_answers(self):
