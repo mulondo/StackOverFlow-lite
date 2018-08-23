@@ -5,7 +5,7 @@ sudo: pip3
 install:
 - pip install -r requirements.txt
 script:
-- python3
+- python3 -m pytest
 - coverage
 - coverage report
 after_success:
