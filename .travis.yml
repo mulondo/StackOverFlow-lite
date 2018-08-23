@@ -4,7 +4,7 @@ python:
 sudo: pip3
 install:
 - pip install -r requirements.txt
-scripts:
+script:
 - pytest --cov=.
 - coverage
 - coverage report
