@@ -2,7 +2,7 @@
 runs the application
 """
 from flask import Flask
-from config import DevelopmentConfig
+from .config import DevelopmentConfig
 from app.modal import Datastore
 from app.views import Routes
 
@@ -18,8 +18,8 @@ class Server:
         Routes.generate_routes(app)
         return app
 
-APP = Server().create_app(config=DevelopmentConfig)
+apps = Server().create_app(config=DevelopmentConfig)
 
 
 if __name__ == '__main__':
-    APP.run()
+    apps.run()
