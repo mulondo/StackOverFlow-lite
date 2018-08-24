@@ -3,9 +3,9 @@ python:
 - "3.5.2"
 sudo: pip3
 install:
-- pip install -r requirements.txt
+- pip3 install -r requirements.txt
 script:
-- python3 -m pytest
+- python3 -cov=.
 - coverage
 - coverage report
 after_success:
