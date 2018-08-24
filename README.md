@@ -1,6 +1,5 @@
 # StackOverFlow-lite
 
-StackOverflow-lite-ui  is a platform where people can ask questions and provide answers.
 # Getting Started
 In your terminal 
 1. Clone the repository locally to your machine by 'git clone' followed by https://github.com/mulondo/StackOverFlow-lite
