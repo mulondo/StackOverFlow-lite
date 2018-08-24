@@ -9,6 +9,6 @@ install:
 
 
 script:
-- pytest --cov=app app/tests/test_api.py
+- pytest --cov=app API/test_api.py
 after_success:
 - coveralls
