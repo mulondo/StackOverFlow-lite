@@ -9,7 +9,7 @@ install:
 
 
 script:
-- python -m unittest discover
+- py.test API/test_api.py
 - pytest --cov app
 after_success:
 - coveralls
