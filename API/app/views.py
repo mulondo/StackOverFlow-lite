@@ -9,5 +9,5 @@ class Routes:
         app.add_url_rule('/api/v1/questions', view_func=Api_controller.as_view('get_quest'), methods=['GET'], strict_slashes=False)
         app.add_url_rule('/api/v1/questions/<int:question_id>', view_func=Api_controller.as_view('get_a_quest'), methods=['GET'], strict_slashes=False)
         app.add_url_rule('/api/v1/questions', view_func=Api_controller.as_view('post_question'), methods=['POST'],strict_slashes=False)
-        app.add_url_rule('/api/v1/questions/<int:question_id>/answers', view_func=Api_controller.as_view('post_an_answer'), methods=['POST'], strict_slashes=False)
+        app.add_url_rule('/api/v1/questions/<int:question_id>/answers', view_func=Api_controller.as_view('post_answer'), methods=['POST'], strict_slashes=False)
         
